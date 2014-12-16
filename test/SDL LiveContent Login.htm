@@ -1,0 +1,3455 @@
+<!DOCTYPE html>
+<html xmlns:lcui="http://www.sdlxysoft.com/LiveContent/UITags" style="height:100%;overflow:auto;"><head xmlns:langres="com.sdl.cd.livecontent.config.ConfigFacade" lcuistring="login.title"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="window.title" content="login.title"><meta name="commenting.identifiers" content="|cid|id|"><meta name="commenting.polling.freq.secs" content=""><meta name="skin" content="SDL-DOC"><meta name="server_url" content="/LiveContent/web/"><meta name="rel_app_url" content="/LiveContent/"><meta name="ui_url" content="/LiveContent/web/ui.xql"><meta name="user" content="guest"><meta name="group" content="guest"><meta name="session_id" content="681BFF5B10BE5D6770BCFAAA5450CBAB"><meta name="loggedin" content=""><meta name="admin" content=""><meta name="dba" content="false"><meta name="lc.identity.permissions" content="USEXFORMS"><meta name="destination" content=""><meta name="applic_filter" content=""><meta name="browsers_supported" content="MSIE;Firefox;Chrome;Mozilla"><meta name="lcde_edit_url" content=""><meta name="lcde_revision_url" content=""><meta name="rss.apikey" content=""><link rel="shortcut icon" href="http://docs.sdl.com/LiveContent/ui/img/favicon.ico" type="image/x-icon"><title lcuistring="login.title">SDL LiveContent Login</title><style type="text/css" style="display:none">/* $Id: LiveContent/ui/skins/base/css/base.css 1.297.1.2 2014/06/16 20:03:52GMT milind Exp  $
+0A. Header
+0B. Search
+0C. Bread crumbs
+0D. User Preference
+
+00. Global Styles
+01. LC Drop Downs, Loading GIF & Message
+02. Header & Footer styles
+03. Major Panel Sets
+04. Resizing / Splitting
+05. Link & Button Styles
+06. Classes for Simple, Centered Container (for login, etc)
+07. Simple Text Styles
+08. Modal Styles
+09. Help Classes
+10. XForms Browse Styles
+10a. XForm status
+11b. inline forms
+11. major panels and tables
+13. app/pub config menus
+15. Table Highlight, Odd, Even Styles
+21. Main Navigation Link Bars
+24. Miscellaneous Styles
+25. Home Page Styles
+26. Search Styles
+27. Tab Styles
+28. Social Plugins
+30. Page Templates (body, header)
+32. Basic TOC Styles
+33. Basic Publist Styles
+34. Advanced Search Styles
+35. Search Result Styles
+36. Styles for Special lc:namespace elements
+37. Basic Index Styles
+38. Codeblock, Codeph, Sample Font-size Increase
+39. increasing courier in code examples
+40. embedding binary content into content pages
+41. JQuery UI - Ribbon Widget 
+42. Xopus Edit Topic dialog
+43. Widgets on the Landing Page
+44. DITA override styles 
+45. Not found pages
+*/
+
+/* =============================================================
+ * 0A. Header
+ * ============================================================= */
+
+.contextHeader {
+	height: 82px;
+	background-color: #FFFFFF;
+	clear:both;
+}
+
+.admintoolSeperator {
+	height: 10px;
+}
+
+.adminToolItem {
+	width: 100%;
+	display:table-row;
+}
+
+.contextHeaderTop {
+	padding-left: 20px;
+	padding-right: 20px;
+    border-top: 1px solid #DDDDDD;
+	height: 56px;
+	background: #f3f3f3;
+}
+
+/*Total height should be 193px*/
+.dashHeader {
+	padding-top: 13px;
+	padding-bottom: 124px;
+	height: 56px;
+	background: #5F6570;
+	position: absolute;
+	width: 100%;
+}
+
+.dashHeader > div {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.dashHeader .contextBreadcrumbChevron {
+    padding-top: 26px;
+    padding-bottom: 25px;
+}
+
+.dashHeader .contextBreadcrumbHome {
+    height: 56px;
+    background:  url(http://docs.sdl.com/LiveContent/ui/css/../img/home.16.mono-bright.png) no-repeat center;
+}
+
+.contextHeaderBottom {
+	height: 25px;
+	padding-left: 10px;
+	padding-right: 10px;
+	vertical-align: middle;
+	background: #FFFFFF;
+}
+
+.contextTitle {
+	text-align: left;
+	font-size: 23px;
+	line-height: 56px;
+	float: left;
+	min-width:100px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.contextHeaderTop .contextTitle {
+	color: #296ACC;
+}
+ 
+.dashHeader .contextTitle {
+	color: #FFFFFF;
+}
+
+
+/* =============================================================
+ * 0B. Search
+ * ============================================================= */
+.contextSearch { /* should become .header_search sometime */
+	clear: right;
+	text-decoration: none;
+	float: right;
+	overflow: hidden;
+	width: 337px;
+	height: 27px;
+	margin-top: 15px;
+}
+
+.contextSearch .ui-btn {
+    margin-left: 194px;
+    margin-top: -1px;
+    position: absolute;
+}
+
+.contextSearch .simpleSearch {
+	float:left;
+	width: 223px;
+	height: 25px;
+	border-radius: 3px;
+	border: 1px solid #B8C0CC;
+	background-color: #F8F8F8;
+}
+
+.contextSearch .simpleSearch.hasFocus {
+	border: 1px solid #5C6066;
+}
+
+.contextSearch .toolSeparator {
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.contextSearch .advSearch {
+	float: left;
+	width: 90px;
+	height: 27px;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 13px;
+	text-align: left;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+}
+
+.contextHeaderTop .advSearch {
+	color: #5A5A5A;
+}
+
+.contextHeaderTop .advSearch:hover {
+	color: #000000;
+}
+
+.dashHeader .advSearch {
+	color: #CFCFCF;
+}
+
+.dashHeader .advSearch:hover {
+	color: #FFFFFF;
+}
+
+.contextSearch .clearBox {
+	display: none;
+	width: 15px;
+	height: 15px;
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/icon_clear_searchBox15_normal-hover.png) no-repeat 0px 0px;
+	position: absolute;
+	margin-left: 173px;
+	margin-top: 5px;
+}
+
+.contextSearch input.hasInput ~ .clearBox {
+	display: block;
+}
+
+.contextSearch .clearBox:hover {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/icon_clear_searchBox15_normal-hover.png) no-repeat -16px 0px;
+}
+
+.contextSearch input{
+	float: left;
+	width: 158px;
+	height: 25px;
+	line-height: 25px;
+	border: 0px;
+	font-size: 12px;
+	color: #262933;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	padding-right: 0px;
+	margin: 0px;
+	background-color: #F8F8F8;
+}
+
+.contextSearch.hasFocus input, .contextSearch input.hasInput {
+	color: #000000;
+	font-style: normal;
+}
+
+.simpleSearchShadow {
+	position: absolute;
+	margin-top: 26px;
+	margin-left: -1px;
+	width: 225px;
+	height: 7px;
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/img_searchbox_shadow.png);
+}
+
+/* =============================================================
+ * 0C. BreadCrumbs
+ * ============================================================= */
+.contextBreadcrumb {
+	float:left;
+	font-size: 11px;
+	height: 25px;
+	line-height: 25px;
+	text-align: left;
+	color: #828B99;
+	text-decoration: none;
+}
+
+.contextBreadcrumbHome {
+	width: 16px;
+	height: 25px;
+	display: block;
+	float: left;
+	vertical-align: middle;
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/home.16.mono-dark.png) no-repeat center;
+}
+
+.contextBreadcrumbChevron {
+	vertical-align: middle;
+	float: left;
+	padding: 10px;
+}
+
+#contextBreadcrumbPath {
+	float: left;
+	height: 25px;
+	white-space: nowrap;
+}
+
+#contextBreadcrumbPath * {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+.breadcrumbElem a, .breadcrumbElem span {
+	display: inline-block;
+	float: left;
+	white-space: nowrap;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+	color: inherit;
+	text-decoration: inherit;
+}
+
+#contextBreadcrumbPath a:hover, #contextBreadcrumbPath a:hover * {
+	color: #296ACC;
+	text-decoration: underline;
+}
+
+.contextBreadcrumbSearch {
+	float: left;
+}
+
+.contextBreadcrumbSearchAdvanced {
+	float: left;
+}
+
+/* =============================================================
+ * 0D. User Preferences
+ * ============================================================= */
+#userPreferencesNormal { 
+	overflow:auto;
+}
+
+#preferencesLoadingCurtain {
+	text-align: center;
+	margin-top:80px;
+	height:250px;
+}
+
+.ui-user-preferences-section {
+	padding: 15px 0px 15px 10px;
+	border-bottom: 1px solid #CFD8E6;
+}
+
+.ui-user-preferences-section-body {
+	margin-left: 21px;
+}
+
+.ui-user-preferences-section-photos {
+	margin:10px 0px 3px 21px;
+}
+
+.ui-user-preferences-section-photos img {
+	border: 2pt solid #296acc;
+}
+
+.ui-user-preferences-section-title {
+	margin-bottom:5px;
+}
+
+.ui-user-preferences-section-title img {
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+/* jquery.Jcrop.min.css v0.9.10 (build:20120429) */
+.jcrop-holder{direction:ltr;text-align:left;}
+.jcrop-vline,.jcrop-hline{font-size:0;position:absolute;}
+.jcrop-vline{height:100%;width:1px!important;}
+.jcrop-hline{height:1px!important;width:100%;}
+.jcrop-vline.right{right:0;}
+.jcrop-hline.bottom{bottom:0;}
+.jcrop-handle{background-color:#333;border:1px #eee solid;font-size:1px;}
+.jcrop-tracker{-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;-webkit-user-select:none;height:100%;width:100%;}
+.jcrop-handle.ord-n{left:50%;margin-left:-4px;margin-top:-4px;top:0;}
+.jcrop-handle.ord-s{bottom:0;left:50%;margin-bottom:-4px;margin-left:-4px;}
+.jcrop-handle.ord-e{margin-right:-4px;margin-top:-4px;right:0;top:50%;}
+.jcrop-handle.ord-w{left:0;margin-left:-4px;margin-top:-4px;top:50%;}
+.jcrop-handle.ord-nw{left:0;margin-left:-4px;margin-top:-4px;top:0;}
+.jcrop-handle.ord-ne{margin-right:-4px;margin-top:-4px;right:0;top:0;}
+.jcrop-handle.ord-se{bottom:0;margin-bottom:-4px;margin-right:-4px;right:0;}
+.jcrop-handle.ord-sw{bottom:0;left:0;margin-bottom:-4px;margin-left:-4px;}
+.jcrop-dragbar.ord-n,.jcrop-dragbar.ord-s{height:7px;width:100%;}
+.jcrop-dragbar.ord-e,.jcrop-dragbar.ord-w{height:100%;width:7px;}
+.jcrop-dragbar.ord-n{margin-top:-4px;}
+.jcrop-dragbar.ord-s{bottom:0;margin-bottom:-4px;}
+.jcrop-dragbar.ord-e{margin-right:-4px;right:0;}
+.jcrop-dragbar.ord-w{margin-left:-4px;}
+.jcrop-light .jcrop-vline,.jcrop-light .jcrop-hline{background:#FFF;filter:Alpha(opacity=70)!important;opacity:.70!important;}
+.jcrop-light .jcrop-handle{-moz-border-radius:3px;-webkit-border-radius:3px;background-color:#000;border-color:#FFF;border-radius:3px;}
+.jcrop-dark .jcrop-vline,.jcrop-dark .jcrop-hline{background:#000;filter:Alpha(opacity=70)!important;opacity:.7!important;}
+.jcrop-dark .jcrop-handle{-moz-border-radius:3px;-webkit-border-radius:3px;background-color:#FFF;border-color:#000;border-radius:3px;}
+.jcrop-holder img,img.jcrop-preview{max-width:none;}
+
+
+/* =============================================================
+ * 00. Global Styles
+ * ============================================================= */
+ 
+::-ms-clear{display:none;}
+
+/*Trick to suppress Chrome outlines for active input elements*/
+*:focus {
+    outline: none;
+}
+
+html {
+	overflow:hidden;
+}	
+
+body { 
+	font-family: Arial, sans-serif !important;
+	font-size: 14px;
+	border: 0px;
+	line-height: 1.5em;
+}
+
+tocbody { 
+	font-family: Arial, sans-serif !important;
+	font-size: 12px;
+}
+
+h1, h2, h3, h4 { font-size: 1em; }
+
+h1 {
+	font-weight: bold;
+	padding: 10px 0 0 0;
+	margin: 0;
+	color: black;
+	border-bottom: 1px dashed silver;
+	overflow:auto;
+}
+
+a img { border:0; }
+
+table tbody, table tr { width: 100%; }
+
+/* style to indicate that a control is diabled at this time */
+.ui-disabled {
+	color: gray;
+}
+
+/* =============================================================
+ * 01. CSS for LC DROP DOWNS
+ * ============================================================= */
+
+.ui-btn {
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #aaaaaa;
+  background: -webkit-linear-gradient(top, #f4f4f4 4%, #e2e2e2 4%, #e2e2e2 96%, #d6d6d6 96%);
+  background: -moz-linear-gradient(top, #f4f4f4 4%, #e2e2e2 4%, #e2e2e2 96%, #d6d6d6 96%);
+  background: -ms-linear-gradient(top, #f4f4f4 4%, #e2e2e2 4%, #e2e2e2 96%, #d6d6d6 96%);
+  background: -o-linear-gradient(top, #f4f4f4 4%, #e2e2e2 4%, #e2e2e2 96%, #d6d6d6 96%);
+  background: linear-gradient(top, #f4f4f4 4%, #e2e2e2 4%, #e2e2e2 96%, #d6d6d6 96%);
+  -webkit-text-shadow: 0px 1px #ffffff;
+  -moz-text-shadow: 0px 1px #ffffff;
+  -ms-text-shadow: 0px 1px #ffffff;
+  -o-text-shadow: 0px 1px #ffffff;
+  text-shadow: 0px 1px #ffffff;
+}
+.ui-btn:hover {
+  border: 1px solid #454545;
+  background: -webkit-linear-gradient(top, #f4f4f4 4%, #f4f4f4 4%, #f4f4f4 96%, #cfcfcf 96%);
+  background: -moz-linear-gradient(top, #f4f4f4 4%, #f4f4f4 4%, #f4f4f4 96%, #cfcfcf 96%);
+  background: -ms-linear-gradient(top, #f4f4f4 4%, #f4f4f4 4%, #f4f4f4 96%, #cfcfcf 96%);
+  background: -o-linear-gradient(top, #f4f4f4 4%, #f4f4f4 4%, #f4f4f4 96%, #cfcfcf 96%);
+  background: linear-gradient(top, #f4f4f4 4%, #f4f4f4 4%, #f4f4f4 96%, #cfcfcf 96%);
+}
+.ui-btn:active,
+.ui-btn[disabled] {
+  color: #ffffff !important;
+  background: -webkit-linear-gradient(top, #454545 4%, #767676 4%, #767676 96%, #545454 96%);
+  background: -moz-linear-gradient(top, #454545 4%, #767676 4%, #767676 96%, #545454 96%);
+  background: -ms-linear-gradient(top, #454545 4%, #767676 4%, #767676 96%, #545454 96%);
+  background: -o-linear-gradient(top, #454545 4%, #767676 4%, #767676 96%, #545454 96%);
+  background: linear-gradient(top, #454545 4%, #767676 4%, #767676 96%, #545454 96%);
+  -webkit-text-shadow: 0px 1px #262c39;
+  -moz-text-shadow: 0px 1px #262c39;
+  -ms-text-shadow: 0px 1px #262c39;
+  -o-text-shadow: 0px 1px #262c39;
+  text-shadow: 0px 1px #262c39;
+}
+.ui-btn[disabled] {
+  cursor: default;
+  filter: alpha(opacity=50);
+  opacity: .5;
+  color: #aaaaaa;
+  background: -webkit-linear-gradient(top, #ffffff 4%, #f4f4f4 4%, #f4f4f4 96%, #d1d1d1 96%);
+  background: -moz-linear-gradient(top, #ffffff 4%, #f4f4f4 4%, #f4f4f4 96%, #d1d1d1 96%);
+  background: -ms-linear-gradient(top, #ffffff 4%, #f4f4f4 4%, #f4f4f4 96%, #d1d1d1 96%);
+  background: -o-linear-gradient(top, #ffffff 4%, #f4f4f4 4%, #f4f4f4 96%, #d1d1d1 96%);
+  background: linear-gradient(top, #ffffff 4%, #f4f4f4 4%, #f4f4f4 96%, #d1d1d1 96%);
+}
+
+.ui-btn.img-btn {
+	width: 16px;
+	height: 16px;
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 4px;
+	padding-bottom: 5px;
+}
+
+.ui-btn.txt-btn {
+	height: 25px;
+	min-width: 10px;
+	font-family: Arial, sans-serif !important;
+	font-weight: 600;
+	font-size: 12px;
+	color: #262c39;
+	padding: 0px 9px;
+	text-align: center;
+	line-height: 25px;
+}
+
+.ui-btn div.img-btn-bg {
+	width: 16px;
+	height: 16px;
+}
+
+.toolSeparator {
+	width: 2px;
+	height: 27px;
+}
+
+.lightSeparator {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/img_separator_light.png);
+}
+
+.darkSeparator{
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/img_separator_dark.png);
+}
+
+
+.btnSettings {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/settings.16.mono-dark.png);
+}
+
+.ui-btn:not([disabled]):active .btnSettings {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/settings.16.mono-bright.png);
+}
+
+.btnEdit {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/edit.16.mono-dark.png);
+}
+
+.ui-btn:not([disabled]):active .btnEdit {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/edit.16.mono-bright.png);
+}
+
+.btnShare {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/share.16.mono-dark.png);
+}
+
+.ui-btn:not([disabled]):active .btnShare {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/share.16.mono-bright.png);
+}
+
+.btnSearch {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/search.16.mono-dark.png);
+}
+
+.ui-btn:not([disabled]):active .btnSearch {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/search.16.mono-bright.png);
+}
+
+.btnAddComment {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/add-comment.16.mono-dark.png);
+}
+
+.ui-btn:not([disabled]):active .btnAddComment {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/add-comment.16.mono-bright.png);
+}
+
+.btnTogglePane {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/show-comments.16.mono-dark.png);
+}
+
+.ui-btn:not([disabled]):active .btnTogglePane {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/show-comments.16.mono-bright.png);
+}
+
+.top_nav_bar_inner_selected .btnTogglePane {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/hide-comments.16.mono-dark.png);
+}
+
+.top_nav_bar_inner_selected .ui-btn:not([disabled]):active .btnTogglePane {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/hide-comments.16.mono-bright.png);
+}
+
+.ui-comment-collapse-all .btnExpCollCommentAll {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/collapse-all.16.mono-dark.png);
+}
+
+.ui-comment-collapse-all.ui-btn:not([disabled]):active .btnExpCollCommentAll {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/collapse-all.16.mono-bright.png);
+}
+
+.ui-comment-expand-all .btnExpCollCommentAll {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/expand-all.16.mono-dark.png);
+}
+
+.ui-comment-expand-all.ui-btn:not([disabled]):active .btnExpCollCommentAll {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/expand-all.16.mono-bright.png);
+}
+
+.admintool-btn {
+	width: auto;
+}
+
+.lc_dropdown_root {
+	list-style:none;
+	margin:0px;
+	padding-left: 10px;
+}
+
+.lc_dropdown_menu {
+	display:none;
+	list-style:none;
+	margin:0px;
+	margin-left:-180px;
+	padding-left:0px;
+	background-color: white;
+	border:1pt solid #B6BCC3;
+	color:black;
+	z-index:1000;
+	position:absolute;
+	text-align:left;
+    line-height: 21px;
+    font-size: 11px;
+	box-shadow: 3px 3px 3px #CDCDCD;
+}
+
+.lc_loading {
+    margin:15px;
+}
+
+.lc_loading span {
+    font-weight:bold;
+}
+
+.lc_loading img {
+    margin-right:10px;
+}
+
+/* =============================================================
+ * 02. Header & Footer styles
+ * ============================================================= */
+.header_nav_bar {
+	overflow:hidden;
+	float:left;
+	margin:0pt 0pt 0pt 0pt;
+	padding:0pt 0pt 0pt 0pt;
+	box-shadow: 0px 1px 2px #CDCDCD;
+}
+
+#header_container {
+	width: 100%;
+}
+
+#header_shared {
+	width: 100%;
+	height: 29px;
+	border-top: 1px solid #353B46;
+	border-bottom: 1px solid #353B46;
+}
+
+#header_inner {
+	width: 100%;
+	height: 28px;
+	border-top: 1px solid #5C636D;
+	background-color: #454B53;
+}
+
+.header_helpIcon {
+	float: right;
+	display: block;	
+}
+
+.header_helpIcon > div {
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	height: 18px;
+	width: 18px;
+	display: block;
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/icon_help18_normal-hover.png) no-repeat 0 0;
+}
+
+.header_helpIcon:hover > div {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/icon_help18_normal-hover.png) no-repeat -19px 0;
+}
+
+.header_divider {
+	float: right;
+	padding-top: 2px;
+	height: 24px;
+}
+
+#header_userPhoto {
+	float: left;
+	margin-top: 4px;
+	height: 20px;
+	width: 20px;
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/img_userPlaceholder20_normal-hover.png) no-repeat 0px 0px;
+}
+
+#header_dropLabel {
+	float:left;
+	padding-left: 5px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	line-height: 14px;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+
+.header_dropdown:hover #header_dropArrow, .header_dropdown.xref_hover #header_dropArrow {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/img_dropDownMenuArrow_normal-hover.png) no-repeat -11px 0px; 
+}
+
+.header_dropdown:hover #header_userPhoto, .header_dropdown.xref_hover #header_userPhoto {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/img_userPlaceholder20_normal-hover.png) no-repeat -21px 0px; 
+}
+
+.header_dropdown {
+	overflow: hidden;
+	float: right;
+	height: 27px;
+	font-size: 11px;
+	color: #DADFE6;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.header_dropdown:hover, .header_dropdown.xref_hover {
+	color: #FFFFFF;
+}
+
+.header_dropdown_menu {
+	display: none;
+	width: 150px;
+	list-style: none;
+	background-color: white;
+	color: black;
+	padding-left: 0px; 
+	box-shadow: 3px 3px 3px #CDCDCD;
+	margin: 0px;
+	margin-left: -108px;
+	margin-top: 29px;
+	border: 1px solid #A1A9B2;
+	position: absolute;
+	text-align: left;
+    line-height: 21px;
+    font-size: 11px;
+	z-index: 1000;
+}
+
+.header_dropdown_menu a, .lc_dropdown_menu a {
+	display: block;
+	color: black;
+	text-decoration: none;
+}
+
+.header_dropdown_menu img, .lc_dropdown_menu img {
+	float:left;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.header_dropdown_menu_chevron {
+	margin: 0px;
+	margin-left: 103px;
+	margin-top: -10px;
+	position: absolute;
+}
+
+.lc_dropdown_menu_options_divider {
+	border-bottom: 1px solid #DDDDDD;
+}
+
+
+.lc_dropdown_menu_title_main {
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-size:11px;
+	font-weight: bold;
+	border-bottom: 1px solid #DDDDDD;
+}
+
+.lc_dropdown_menu_title, .header_dropdown_menu_item, .context_dropdown_menu_item {
+	padding: 6px;
+	padding-left: 0px;
+	padding-right: 0px;
+	text-size:11px;
+}
+
+.lc_dropdown_menu_title:hover, .header_dropdown_menu_item:hover, .context_dropdown_menu_item:hover {
+	color: white;
+	background-color: #2972CC;
+}
+
+.lc_dropdown_selectable .lc_dropdown_menu_title {
+	padding-left:20px;
+	padding-right:20px;
+}
+
+.lc_dropdown_menu_title_selected {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/img_checkmark7.png) no-repeat left;
+	background-position: 8px;
+}
+
+#header_dropdown_logIn {
+	padding-left: 26px;
+}
+
+#header_dropdown_logOut {
+	border-top: 1px solid #E1E1E1;
+}
+
+.context_dropdown_menu {
+	display: none;
+	width: 150px;
+	list-style: none;
+	background-color: white;
+	color: black;
+	padding-left: 0px; 
+	box-shadow: 3px 3px 3px #CDCDCD;
+	margin: 0px;
+	margin-left: -112px;
+	margin-top: 30px;
+	border: 1px solid #A1A9B2;
+	position: absolute;
+	text-align: left;
+    line-height: 21px;
+    font-size: 11px;
+	z-index: 1000;
+}
+
+.context_dropdown_menu a {
+	display: block;
+	color: black;
+	text-decoration: none;
+}
+
+.context_dropdown_menu img {
+	float:left;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.context_dropdown_menu_chevron {
+	margin-left: 123px;
+	margin-top: -10px;
+	position: absolute;
+}
+
+.context_dropdown_menu_chevron.context-dropdown-menu-chevron-left-shift {
+	margin-left: 15px;
+}
+
+.context_dropdown_menu_item {
+	padding: 6px;
+	padding-left: 0px;
+	padding-right: 0px;
+	text-size:11px;
+}
+
+.context_dropdown_menu_item:hover, .context_dropdown_menu_item:hover a {
+	color: white;
+	background-color: #2972CC;
+}
+
+#context_dropdown_Filter {
+	display:none;
+}
+
+#settings_drop_arrow {
+	margin: 0px 0px 2px 4px;
+}
+
+#footerPanel {
+	width: 100%;
+	background-color: #DAD8D3;
+}
+
+#footerPanel .footnote {
+margin: 6px 10px 4px 0 !important;
+padding-bottom: 0px;
+float: right;
+}
+
+#footer-panel-inner {
+height:30px;
+width: 100%;
+}
+
+#body_container, #controlbar {
+/*	border-bottom: 1px solid #587183; -- the borders must be placed here to avoid panel-created bugs in border appearance on Firefox */
+	width:100%;
+}
+
+#body_container_wrapper {
+	clear:both;
+}
+
+#footnote_icon {
+	margin: 0px 4px -4px;
+}
+
+
+/* =============================================================
+ * 03. Major Panel Sets
+ * ============================================================= */
+
+.cvSharedComp {
+	width: 97%\9;
+	overflow: hidden;
+}
+
+.full_page {
+	position:fixed;
+	scrollbars:none;
+}
+
+.mainBody {
+	background-color: #FAFAFA;
+	padding:0px;
+	margin:0px;
+}
+
+.normalPanel {
+	overflow:hidden;
+	float:left;
+	margin:0pt 0pt 0pt 0pt;
+	padding:0pt 0pt 0pt 0pt; 
+}
+
+.zeroHeightPanel {
+	overflow:auto;
+	border:0pt solid red;
+	float:left;
+	margin:0pt 0pt 0pt 0pt;
+	padding:0pt 0pt 0pt 0pt; 
+	height:0px;
+	display:none;
+}
+
+.contentPanel {
+	overflow:hidden !important;
+	margin:0pt 0pt 0pt 0pt;
+	float:left;	
+	clear:left;
+	background-color: #FFFFFF;
+	z-index:3;
+	width:100%;
+}
+
+.dashBody {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+.centeredPanelWrapper {
+	overflow:auto !important;
+	margin:auto;
+	background-color: #FFFFFF;
+	z-index:3;
+	width:100%;
+}
+
+#contentPanel.centeredPanelWrapper {
+	position: absolute;
+	border-radius: 4px;
+	border: 1px solid #E6E7E8;
+}
+
+#MAIN_CONTENT {
+	padding: 10px;
+}
+
+.containerPanel {
+	overflow:hidden;
+	border:0pt solid black;
+	margin:0pt 0pt 0pt 0pt;
+	padding:0pt 0pt 0pt 0pt; 
+	float:left;	
+	background-color: #FFFFFF;
+}
+
+.hPanel {
+	overflow: hidden;
+	display: none;
+	float: left;
+	margin:0pt 0pt 0pt 0pt;
+	padding:0pt 0pt 0pt 0pt; 
+}
+
+.right_vertical_orient_panel {
+	float:right;
+}
+
+#tocPanel {
+overflow: hidden;
+}
+
+.tocPanel {
+	overflow: auto;
+	text-align: left;
+	margin-bottom:0px;
+	margin-top:0px;
+	padding:0px;
+	clear:left;
+	float:left;
+	background-color:white;
+}
+
+.tocInnerPanel {
+	width: 100%;
+}
+
+.tocPanel .adminMenuBar {
+	border-bottom:0px;
+	margin:0;
+	padding-bottom: 0;
+	float: left;
+	clear: left;
+}
+
+.tocPanel .top_nav_bar .adminMenuBar {
+	float: left;
+}
+
+.toc_dropdown_menu_chevron {
+  margin: -10px 0 0 123px;
+  position: absolute;
+}
+
+.top_nav_bar {
+	height: 45px;
+	line-height: 45px;
+	overflow: hidden;
+	width: 100%;
+	border-bottom: 1px solid #DDDDDD;
+}
+
+.top_nav_bar_inner_selected {
+	background: #FFFFFF;
+}
+
+.contentPanel .top_nav_bar {
+	background: #F8F8F8;
+}
+
+.top_nav_bar_inner_right_group {
+	float:right;
+} 
+
+.top_nav_bar_inner_left_group {
+	float:left;
+}
+
+/* for buttons (or its' <div>s for dropdowns) that are hanging out in the inner-nav-bar by themselves. PLEASE no padding here - clickable area*/
+.top_nav_bar_inner_left_btn {
+	margin-top: 10px;
+	margin-right: 10px;
+	float: left;
+}
+.top_nav_bar_inner_right_btn {
+	margin-top: 10px;
+	margin-right: 10px;
+	float: right;
+}
+
+.top_nav_bar_inner_right_object {
+	float:right;
+	margin-top: 9px;
+} 
+
+.top_nav_bar_inner_left_object {
+	float:left;
+	margin-top: 9px;
+	padding-right:5px;
+	padding-left: 10px;
+} 
+
+	
+/* background for the toc panel where the DITA map tree is */
+.ui-content-toc {
+	background-color: #FAFAFA;
+}
+
+#top_nav_bar_comments {
+	min-width: 325px;
+}
+
+/* grey text to use inside the inner-nav-bar */
+.top_nav_bar_inner_text {
+	font-size:15px;
+	padding-left: 20px;
+	padding-right:10px;
+	color: #262C39;
+	text-shadow: 0px 1px 0px #FFFFFF;
+}
+
+.top_nav_bar .lc_dropdown_menu, .top_nav_bar .context_dropdown_menu {
+	margin-left: -130px;
+	margin-top: 15px;
+	width: 160px;
+}
+
+
+.hidden {
+	display:none;
+}
+
+.lcDocButtonLeft {
+	float: left;
+	margin: 3px;
+	margin-left: 18px;
+	margin-top:5px;
+}
+
+.lcDocButtonLeft .lc_dropdown_menu{
+	margin:0px !important;
+}
+
+.lcHelpButton, .lcDocButton, .lcDocButton img {
+	width: 16px;
+	height: 16px;
+	float: right;
+	margin: 3px;
+	margin-right: 12px;
+}
+
+.lcDocButtonLarge {
+	padding-top:4px;
+	float:right;
+}
+
+/* =============================================================
+ * 04. Resizing / Splitting
+ * ============================================================= */
+.vsplitbar {
+ -moz-user-select: none;
+    background: none repeat scroll 0 0 #CFD8E6;
+    border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+    cursor: e-resize;
+    overflow: hidden;
+    max-width: 8px;
+    min-width: 8px;
+	width: 8px;
+}
+@media not screen and (max-device-width: 980px) {
+	.vsplitbar {
+	    max-width: 1px;
+	    min-width: 1px;
+		width: 1px;
+	}
+}
+
+.vsplitbar a {
+	width: 8px;		/* essentially, hide the handle */
+	height: 18px;
+	display:block;
+	cursor: e-resize;
+}
+@media not screen and (max-device-width: 980px) {
+	.vsplitbar a {
+		width: 0px;		/* essentially, hide the handle */
+	}
+}
+
+.hsplitbar {
+	height: 10px;
+	background-image: url(http://docs.sdl.com/LiveContent/ui/css/../img/resizeh.gif);
+	background-position: left top;
+}
+@media not screen and (max-device-width: 980px) {
+	.hsplitbar {
+		height: 5px;
+	}
+}
+.resize_disabled {
+	cursor: default !important;
+	background: #CCCCCC !important;
+}
+
+/* =============================================================
+ * 05. Link & Button Styles
+ * ============================================================= */
+.xref {
+	cursor: pointer;
+	_cursor: hand;
+}
+
+.href {
+	color:blue;
+	text-decoration: underline;
+}
+
+.adminMenuBar {
+	margin-bottom:15px;
+	margin-top:10px;
+	overflow:auto;
+	clear:both;
+}
+ 
+.admin_config_menu_item {
+	padding:5px;
+	margin-right:10px;
+	color:black !important;
+	float:left;
+}
+
+.admin_config_menu_item:hover {
+	background-color:#C6DEFF;
+}
+
+/* =============================================================
+ * 06. Login
+ * ============================================================= */
+
+.login {
+	height: 100%;
+	overflow:auto;
+	margin:0px;
+	overflow: hidden;
+}
+
+#login_background {
+	height: 100%;
+	width: 100%;
+	left: 0px;
+	top: 0px;
+	position: fixed;
+	z-index: 0;
+}
+
+#login_background img {
+	width: 100%;
+	height: 100%; 
+}
+
+#login_content {
+	z-index: 2;
+	position: absolute;
+    height: 100%;
+    width: 100%;
+	color: white;
+	background-image: url("http://docs.sdl.com/LiveContent/ui/css/../img/sdl_logo_white.png");
+	background-position: 98% 5%;
+	background-repeat: no-repeat;
+}
+	
+.login .login_content_table
+{
+    height: 100%;
+}	
+.login table 
+{
+    width: 100%;
+    border: none;
+    border-spacing: 0px;
+    padding: 0px;
+}
+
+.login .splash {
+	background-image: url("http://docs.sdl.com/LiveContent/ui/css/../img/login_dialog_lcd.png");
+	background-repeat:no-repeat;
+	height: 314px;
+	width: 424px;
+	margin-top: 100px;
+
+}
+
+.login-title {
+	padding-top: 35px;
+	text-align:left;
+	padding-left: 30px;
+}	
+
+.login-title div {
+	display:inline-block;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.login-title img {
+	vertical-align: middle;
+	margin-left: 20px;
+	margin-top: -5px;
+}
+
+.login .fields {
+	text-align:center;
+	font-size:11px;
+	font-weight: bold;
+	padding-top:25px;
+}
+
+.login .fields div {
+	margin-bottom: 5px;
+}
+
+.login_input input, .login_input select {
+    width:200px;
+}
+
+.login_label {
+	text-align:right;
+	padding:5px;
+}
+
+.login_input{
+	text-align: left;
+}
+
+.login_button {
+	margin-top:15px;
+}
+
+.login_status 
+{
+    margin-right:auto;
+    margin-left:auto;
+	width: 424px;
+}
+
+.footnote {
+	text-align:center;
+	color:#000000;
+	margin-top:20px;
+}
+
+/*****************************
+* 07. Simple Text Styles:
+******************************/
+.changes_warning, .warning {
+	padding:10px;
+	background-color: #f9f2b4;
+	border:1px solid #D9A600;
+	margin-bottom:10px;
+	overflow:auto;
+}
+
+.confirm_message {
+	padding:10px;
+	background-color: #BCE954;
+	border:1px solid #A0C544;
+	margin-bottom:10px;
+	overflow:auto;
+	font-weight:bold;
+}
+
+.error_warning {
+	padding:10px;
+	background-color: #E55451;
+	font-weight:bold;
+	border:1pt solid red;
+	margin-bottom:10px;
+}
+
+.error {
+	font-weight: bold;
+	color:red;
+	margin:4px;
+}
+
+.warning { 
+	font-weight:bold;
+	color:orange;
+}
+
+
+.bravo {
+	font-weight: bold;
+	color: green;
+}
+
+.normal { 
+	font-weight: normal;
+	color: black;
+}
+
+.normalLabel {
+}
+
+.smallLabel {
+	color:gray;
+	font-size:10px;
+}
+
+.label {
+	font-weight:bold;
+}
+
+.language_select {
+	text-align:right;
+	color:#666666;
+	margin-top:5px;
+}
+
+/******************
+* 08. Modal Styles
+*******************/
+/* wrapper and transparent panel for modals and confirm dialogs */
+.ui-modal-wrapper {
+	background-image: url(http://docs.sdl.com/LiveContent/ui/css/../img/modal_bg_extended.png);
+	background-repeat: repeat-x;
+	background-position: center bottom;
+	border: 1pt solid #8a9099;
+	background-color:white;
+	z-index:111;
+	position:fixed;
+}
+
+.ui-modal-blocking {
+	position:fixed;
+	background-color:black;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	z-index: 110;
+	opacity:0.75;
+	display:none;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=75);	
+}
+
+
+/* Headers for Modals / Confirm dialogs */
+.ui-modal-header {
+	color:#296acc;
+	font-weight:bold;
+	font-size:14px;
+	overflow:auto;
+	margin:10px;
+	margin-bottom: 0px;
+}
+
+.ui-modal-title {
+	float:left;
+}
+
+.ui-modal-title img {
+	vertical-align: middle;
+}
+
+.ui-modal-title span {
+	margin-left:    15px;
+	white-space:    nowrap;
+}
+
+/* Content inside Modals / Confirm dialogs */
+.ui-modal-content {
+	margin: 0px 15px 0px 10px;
+}
+
+.ui-modal-confirm .ui-modal-content {
+	margin: 0px 15px 0px 62px;
+}
+
+.ui-modal-buttons {
+	text-align: right;
+	padding:10px;
+}
+
+.ui-modal-buttons input {
+	margin-right: 10px;
+}
+#lcModalClose {
+	float:right;
+}
+
+
+.ui-modal-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 111;
+	display:none;
+}
+
+.ui-modal-body {
+	overflow:auto;
+	color: #5C6066;
+	font-size: 11pt;
+}
+
+.lcModalInner {
+	padding:10px;
+	text-align:left;
+}
+
+.lcModalInner .adminMenuBar {
+	border-bottom: 0px;
+}
+
+.lcModalTitle {
+	background:#CCFFCC;
+	padding: 5px 5px 5px 5px;
+	overflow:auto;
+	font-weight: bold;
+	color: black;
+	font-size:1.2em;
+}
+
+.lcModalClose {
+	cursor: pointer;
+	_cursor: hand;
+	float:left;
+	margin-left:30px;
+}
+
+.lcModalContent {
+	padding: 20px;
+}
+
+.lcMouseHover {
+    position:absolute;
+    display:none;
+    z-index:1001;
+    border:1pt solid black;
+    background:url("http://docs.sdl.com/LiveContent/ui/css/../img/toolbar_gradient.png");
+    background-repeat: repeat-x;
+    background-position: bottom left;
+	background-color: white;
+    padding: 5px 5px 0px 5px;
+    clear:both;
+}
+
+ 
+ #lcModal iframe {
+ 	padding:0px;
+ 	border:0;
+ 	margin:0px;
+ 	margin-bottom:60px;
+ }
+
+/* Drop down coloring in modals */ 
+.lcModalInner .xref_hover {
+	background-color: #F5F7FA;
+}
+
+.lcModalInner .lc_dropdown_menu {
+	margin-left:10px;
+	padding: 5px;
+}
+ 
+/* ===================
+* 09. Help Classes 
+* ==================== */
+.help_top_left {
+	clear:both;
+	float:left;
+} 
+
+.help_top_right {
+	text-align:right;
+}
+
+.main_content {
+	padding:10px;
+}
+
+
+ /* =============================================================
+ * 10. XForms Browse Styles
+ * ============================================================= */
+#lcDocXFormsHeader {
+	overflow:auto;
+	border-left: 1px solid #B8C5D9;
+	float: right;
+}
+
+.lc_dropdown_menu .ui-datepicker { display: block; }
+
+.xform_doc_header_label {
+	font-weight: bold;
+	position: relative;
+	bottom: 5px;
+}
+
+.xform_browse_wrapper {
+	margin-bottom:60px;
+}
+
+ .xform_browse_title {
+ 	margin-top:15px;
+ 	padding: 5px 0px 5px 0;
+ 	background-color: #eeeeee;
+ }
+ 
+ .xform_browse_instances th {
+ 	text-align: left;
+ }
+ 
+ .xform_browse_doc {
+ 	background-color: #F2F8FF;
+ 	margin:15px;
+ 	padding:10px;
+ }
+ .xform_browse_type_container{
+ 	padding:0px;
+ }
+ .xform_browse_type_title{
+ 	float:left;
+ }
+ .xform_browse_type_pager {
+ 	float:right;
+ 	padding:0px 10px 0px 10px;
+ }
+ 
+ .xform_browse_type_add_button {
+ 	float:right;
+ }
+ 
+ .xform_browse_type_rss_button {
+ 	float:right;
+ 	padding: 0px 10px 0px 10px;
+ }
+ 
+ .xform_browse_doc_list{
+ 	width:100%;
+ 	margin-top:20px;
+ }
+ 
+ .xform_browse_doc_list_header {
+ 	/* border-top:1pt solid gray;
+ 	border-bottom:1pt solid gray; */
+ 	padding:3px;
+ 	overflow:auto;
+ }
+
+ .xform_browse_doc_list .xform_browse_doc_list_header {
+ 	border-bottom:1pt solid gray;
+ 	border-top:0pt !important; 
+ 	padding:3px;
+ 	overflow:auto;
+ }
+ 
+ .xform_browse_doc_reply .xform_browse_doc_list_header {
+ 	border-bottom:0pt !important; 
+ 	border-top:0pt !important;	
+ }
+
+.xform_control {
+	text-align:center;
+	padding:5px;
+	width:25px;
+}
+
+.xform_browse_doc_list_view {
+	padding:10px;
+	margin-left: 25px;
+	display:none;
+	overflow:auto;
+}
+ 
+.xform_browse_doc_list_footer {
+	font-size: .8em;
+	color:gray;
+	margin-top:10px;
+} 
+
+.xform_browse_doc_list_footer span { margin-right:35px; }
+ 
+.xform_browse_doc_show {
+	float: left;
+}
+
+.xform_table_title {
+	margin-left: 40px;
+	height:16px;
+}
+
+.xform_browse_doc_title { 
+	font-weight:bold; 
+	float: left;
+	margin-left: 20px;
+	background-color: #C3CD99;
+	width: 90%;	
+	padding: 5px;
+}
+
+.xform_doc_header_icon {
+	height:24px;
+	margin-left:15px;
+	margin-right:5px;
+}
+
+.xform_icon { }
+
+#xform_comments_title { 
+	font-weight:bold;
+	position: relative;
+	bottom:5px;
+}
+
+.xform_pre {
+	display:inline;
+	font-family:inherit;
+	font-size:1em;
+}
+/* bill */
+.xform_status_buttons {
+	overflow:auto;
+	margin-top:10px;
+	color:blue;
+	padding-left: 20px;
+}
+
+.xform_browse_doc_list_actions {
+	overflow:auto;
+	margin-top:10px;
+	color:blue;
+	padding-left: 20px;
+}
+.xform_browse_doc_list_action_reply {
+	float:left;
+	padding: 0px 45px 0 0;
+}
+.xform_browse_doc_list_action_edit {
+	padding: 5px;
+	float:left;
+}
+.xform_browse_doc_list_action_delete {
+	padding: 5px;
+	float:left;
+}
+.xform_browse_doc_list_action_status {
+	padding: 5px;
+	float:left;
+}
+
+.small_note {
+	font-size: 9px;
+	text-align:right;
+}
+
+ /* =============================================================
+ * 10a. XForms Status --- NOTE: moved to commenting.css ---
+ * ============================================================= */
+
+/* =====================================
+	10b. inline xforms 
+   ===================================== */
+.xform_inline_button {
+	float:left;	
+	border:1pt solid gray;
+	font-size:1.3em;
+	margin-right:5px;
+	padding:6px;
+	background-color:white;
+}
+
+.xform_inline_button_selected {
+	border:1pt solid black;
+	background-color:#C6DEFF;
+}
+
+/* ==========================================
+ * 	11. major panels and tables
+ * ========================================== */
+.inner_admin_menu, .inner_toc_menu, .inner_content {
+	overflow: auto;
+	clear:both;
+	position:relative;
+}
+
+.inner_content {
+	position: relative;
+}
+
+.admin_body_inner {
+	padding:10px;	
+}
+
+.config_table {	
+
+}
+
+.config_table th {
+	background-color:#C6DEFF;
+	padding:2px;
+	text-align:left;
+	padding:9px;
+	font-weight: normal;
+	background-color: inherit;
+}
+
+h2.table_section_header {
+	background-color:#DAD8D3;
+	padding:5px 10px;
+	color:#000;
+	font-weight: bold;
+}
+			
+.table_section_title {
+	background-color:#B7CEEC;
+	padding:2px;
+}
+			
+.table_container {
+	border:1pt solid #6698FF;
+	margin:10px;
+	padding:10px;	
+}
+
+
+/*****************************
+* 15. Table Highlight, Odd, Even, Disabled Styles
+******************************/
+.lc-table {
+	width: 100%;
+ 	border-collapse: collapse;
+ 	border-spacing:0px;
+}
+
+.lc-table tr, .lc-table td, .lc-table th {
+	padding:0px;
+	vertical-align:top;
+}
+
+.lc-table tr:nth-child(even) { background-color:#e6ebf2; }
+.lc-table tr:nth-child(odd) { background-color:#F5F7FA; }
+
+.highlightRow { background-color:#E3E4FA; }
+
+.rowEven { background-color:#e6ebf2; }
+
+.rowOdd { background-color:#F5F7FA; }
+
+.rowEven td, .rowOdd td, .rowEven th, .rowOdd th, .rowEven td.cellDisabled, .rowOdd td.cellDisabled {
+	border-bottom: 1px solid #B6BCC3;
+}
+
+.rowEvenSimple { background-color:#e6ebf2; }
+
+.rowOddSimple { background-color:#F5F7FA; }
+
+
+.cellDisabled { background-color:#E0E0E0; }
+ 
+/* =============================================================
+ * 21. Main Navigation Link Bars <NO LONGER IN USE - if removed appropriate section in ui_helper.xsl needs to be removed>
+ * ============================================================= */
+
+ul.main_nav_bars_list {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.main_nav_profile {
+	width:100%;
+	list-style-type: none;
+	height: 44px;
+	float: left;
+	text-align:left;
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/frame.profile_bg.png) repeat-x;
+}
+
+.main_nav_profile img {
+	float: left;
+    margin-left: 8px;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.main_nav_profile div {
+	display: inline-block;
+	padding-top: 8px;
+}
+
+.main_nav_profile #lc_username {
+	display: block;
+	color: #FFFFFF !important;
+	font-family: Arial;
+	font-size: 12px;
+}
+
+.main_nav_profile #lc_position{
+	color: #DBCABD !important;
+	font-family: Arial;
+	font-size: 10px;
+}
+
+.main_nav_section {
+	width:100%;
+	list-style-type: none;
+	height: 24px;
+	float: left;
+	text-align:left;
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/frame.section_bg.png) repeat-x;
+	color: #DBCABD !important;
+	font-family: Arial;
+	font-size: 10px;	
+}
+
+.main_nav_section span{
+	line-height: 24px;
+	margin-left: 7px;
+}
+
+.main_nav_section img {
+	margin-top: 7px;
+	margin-left: 7px;
+	margin-right: 3px;
+}
+
+.main_nav_bar {
+	width:100%;
+	list-style-type: none;
+	height: 44px;
+	float: left;
+	text-align:left;
+}
+
+.main_nav_bar a span {
+	display: block;
+	float: left;
+}
+ 
+.main_nav_bar_link {
+	height:44px;
+	line-height:44px;
+	display: block;
+	padding-left:6px;
+	cursor: pointer;
+}
+
+.main_nav_bar_link img {
+	margin-right:5px;
+	float:left;
+	padding-top:9px;
+}
+
+a.main_nav_bar_link {
+	color: #262C39 !important;
+	font-family: Arial;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+a.main_nav_bar_link.selected {
+}
+
+a.main_nav_bar_link:hover {
+}
+
+a.main_nav_bar_link:active {
+}
+
+.main_nav_bar_new_window {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+/* =============================================================
+ * 24. Miscellaneous Styles
+ * ============================================================= */  
+ 
+#lcLogo_body { width:100%; }
+
+#lcLogo_img { margin: 80px auto 0px; display:block; }
+
+div.permissions { width: 100%; }
+
+.sdl_logo { width:200px; }
+
+/* =============================================================
+ * 25. Home Page Styles
+ * ============================================================= */  
+.dita-mapmeta {
+	margin-left:35px;
+	margin-top:10px;
+}
+
+.dita-mapmeta-section {
+	margin-bottom:10px;
+}
+
+.home_title {
+ 	font-size: 1.2em;
+ 	font-weight: bold;
+	padding: 10px 0 0 0;
+	margin: 0;
+	color: black;
+}
+
+.home_subject {
+	text-decoration: none;
+	color: black;	
+}
+
+.home_subject:hover {
+	color: #296ACC;
+	text-decoration: underline;
+}
+
+.home_shortdesc { 
+	padding: 15px 0;
+}
+
+.home_copyright_separator {
+ 	font-size: 0.9em;
+	padding: 3px 0 0 0;
+	width: 100%;
+	border-bottom: 1px dashed silver;
+	margin: 0;
+	color: black;
+}
+ 
+.home_copyright_symbol {
+ 	font-size: 0.9em;
+	padding: 4px 0 0 0;
+	margin: 0;
+	color: black;
+}
+
+.home_copyright {
+ 	font-size: 0.9em;
+	padding: 3px 0;
+	margin: 0;
+	color: black;
+}
+
+/******************************************
+	26. Search Styles
+*******************************************/
+#search_showPrevNext {
+	padding-left: 10px;
+	padding-right: 20px;
+	margin-bottom:10px;
+	color: #000000;
+}
+
+img.search_type {
+	margin-right: 8px;
+}
+
+.search_advancedLink {
+	float: right;
+	color: #296ACC;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.search_advancedLegend {
+	float: right;	
+	color: #296ACC;
+}
+
+/* =============================================================
+ * 27. Tab Styles
+ * ============================================================= */  
+.lc_tab_group {
+	padding:0px;
+	padding-top:5px;
+	border-bottom:2pt solid gray;
+	overflow:auto;	
+} 
+
+.lc_tab {
+	float: left;
+	padding: 4px 8px 2px;
+	border-width: 1px 1px 0px;
+	border-style: solid;
+	border-color: inherit;
+	margin-top:5px;
+	margin-right:1px;
+	background-color: #959DA6; /*#ffd96e; */
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.lc_tab:hover { background-color:#C6DEFF; }
+
+.lc_tab.lc_tab_selected {
+	padding: 8px 8px 2px;
+	border-width: 2px 2px 0px;
+	margin-top:0px;	
+	background-color: #DAD8D3; /*#ffab42;*/
+} 
+
+.lc_tab.lc_tab_selected:hover { background-color: #2972CC; }
+
+
+/* =============================================================
+ * 28. Social Plugins
+ * ============================================================= */ 
+.social_dropdown_menu {
+    background-color: white;
+    border: 1pt solid #B6BCC3;
+    color: black;
+    display: none;
+    list-style: none outside none;
+    margin-left: -75px;
+    margin-top: 15px;
+    padding-left: 0;
+    position: absolute;
+    text-align: left;
+    line-height: 21px;
+    font-size: 11px;
+    z-index: 1000;
+}
+
+.social_dropdown_menu_chevron {
+	margin: 0px;
+	margin-left: 72px;
+	margin-top: -10px;
+    position: absolute;
+}
+
+.social_container {
+	width: 95px;
+	height:30px;
+	padding-left:5px;
+	overflow:hidden;
+}
+
+.social_top_container {
+	width: 95px;
+	height:30px;
+	padding-left:5px;
+	padding-top:10px;
+	overflow:hidden;
+}
+
+/****************************************
+		31. Page Templates (body, header) 
+****************************************/
+
+.page_header {
+	text-align:right;
+	margin-right:10px;		
+}
+
+.page_body, .nested0 {
+	padding-left:20px;
+	padding-top:10px;
+	padding-right:20px;
+	padding-bottom:10px;
+}
+
+#lc_doc_footer {
+	margin:20px;
+	font-weight:bold;
+}
+
+#footnote_icon {
+	margin: 0px 4px -4px;
+	float:right;
+}
+
+
+/****************************************
+		32. Basic TOC Styles
+****************************************/
+#toc_div, #index_div {
+	margin-bottom: 10px; /* introducing margins for iPad and Android scrolling */
+	font-size: 12px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 15px;
+}
+
+#tocPanel .tocPanel, div.lc_toc_top {
+	width:100%;
+	overflow: auto;
+}
+
+#tocPanel li {
+	clear: left;
+}
+
+.toc_without_child {
+	margin-left: 0px;
+}
+
+.lc_toc_expand_img, .lc_toc_spacer_img {
+	width:16px;
+	height:16px;
+	padding-top: 3px;
+	overflow: hidden;
+	float: left;
+}
+.lc_toc_spacer_img {
+	visibility: hidden;
+}
+
+
+span.lc_toc_doc_title {
+	padding-left: 20px;
+}
+div.lc_toc_doc_title {
+	margin-left: 0px;
+	padding-left: 35px;
+	padding-right: 10px;
+	word-wrap: break-word;
+}
+div.lc_toc_pub_title {
+	font-weight: bold;
+	padding-left: 19px;
+}
+.lc_title_hover_box {
+	#position: absolute;
+	border: 1px solid #FAFAFA;
+}
+@media not screen and (max-device-width: 980px) {
+	.lc_title_hover_box:hover {
+		background-color: #E9F0FA;
+		border: 1px solid #BED2F0;
+	}
+}
+.lc_title_hover_box:active {
+	background-color: #BED2F0;
+}
+li.toc_with_child>div>div.lc_toc_doc_title {
+	margin-left: 0px;
+	#padding: 5px;
+}
+div.lc_toc_doc_img {
+	float: left;
+	padding: 2px 2px 2px 0;
+}
+
+div.lc_toc_title {
+	display:block;
+}
+
+.lc_toc_tree.lc_toc_folder span {
+	margin-bottom:4px;
+	padding-left: 5px;
+}
+
+span.lc_toc_doc_title { padding-left:0px\9; } /* And removes the now-excess padding */
+
+
+.lc_toc_top ul.lc_toc_tree {
+	margin-top:10px;
+	margin-left: 10px;
+	margin-right: 5px:
+}
+
+.lc_toc_top ul.lc_toc_tree { /* ie hackery */
+	margin-top: 0px\9;
+	margin-left: 0px\9;
+	padding-top:0px\9;
+}
+
+ul.lc_toc_tree li, ul.lc_toc_tree li ul, ul.lc_toc_tree li ul li, ul.lc_toc_tree li ul li span, ul.lc_toc_tree li ul li span span{
+	width: auto;
+}
+
+ul.lc_toc_tree ul.lc_toc_tree {
+	margin-top:0px;
+	margin-left:0px;
+}
+
+.lc_toc_tree {
+ 	list-style-type:none;
+ 	padding-left:0px;
+ 	margin-left:0px;
+ 	margin-bottom:4px;
+ 	clear: left;
+ 	#width: 90%\9; /* ie hackery */
+}
+
+.lc_toc_document {
+	#margin-bottom:4px;
+}
+
+li.lc_toc_document {
+	clear: left;
+}
+
+.lc_toc_document > img {
+	height:16px;
+	width: 16px;
+}
+
+li.lc_toc_document a {
+	text-decoration: none;
+	color: black;
+}
+
+.lc_toc_tree_inside_folder, .lc_toc_tree_inside_document {
+ 	list-style-type:none;
+ 	padding-left: 20px !important;
+ 	display:none;
+	margin-left: 0px;
+	margin-top: 0px;
+}
+
+.lc_toc_folder {
+	padding-left: 20px;
+}
+
+.lc_toc_tophead {
+	font-weight:bold;
+}
+
+.lc_toc_tree span img {
+	vertical-align: middle;
+}
+
+.lc_toc_selected {
+	color: #262C39;
+	background-color:#BED2F0;
+	padding: 5px;
+	border: 1px solid #94B5E5;
+}
+
+
+/****************************************
+		33. Basic Publist Styles
+****************************************/
+@media not screen and (max-device-width: 980px) {
+	.publist_row:hover {
+		background-color: #E9F0FA;
+	}
+}
+.publist_row:active {
+	background-color: #BED2F0;
+}
+.publist_row  .publist_entry_icon {
+	width: 36px;
+}
+.publist_row.normal  .publist_entry_icon {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/img_TableExpand_normal16.png) no-repeat 10px 11px;
+}
+.publist_row.opened  .publist_entry_icon {
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/img_TableExpand_opened16.png) no-repeat 10px 11px;
+}
+
+.publist_row.opened  .lc_shortdesc {/*aw*/
+	font-size: 12px;
+	color: #5C636D;
+	margin-bottom: 10px;
+	padding-left: 40px;
+	padding-right: 26px;
+}
+.publist_row.normal  .lc_shortdesc {
+	display: none;
+	margin-bottom: 2px;
+	padding-left: 26px;
+}
+
+.publistWidgetToolbar {
+	margin: 0px -5px 0px;
+	width: 98%;
+	background: #f8f8f8;
+	border:1px solid #D7DEEA;
+	border-bottom:none;
+	min-height:30px;
+	-moz-box-shadow: 0px 0px 3px #d1d1d1;
+	width:100%;
+}
+
+.publistWidgetBody {
+	margin: 0px -5px 5px;
+	width: 98%;
+	background: #FFFFFF;
+	border:1px solid #D7DEEA;
+	min-height:500px;
+	-moz-box-shadow: 0px 0px 3px #d1d1d1;
+	width:100%;
+}
+
+.publist {
+	display:table;
+	table-layout: fixed;
+	width: 100%;
+}
+.publistitemA {
+	display:table;
+	table-layout: fixed;
+	width: 100%;
+	padding-top: 10px;
+	border-bottom: 1px solid #cfd8e6;
+}
+.publistitemB {
+	display:table;
+	table-layout: fixed;
+	width: 100%;
+}
+
+/*aw create shadow effect in publist header */
+.publistWidgetHeader {
+	margin: 0 -5px 0 -5px;
+}
+.publist .tr {
+	display: table-row;	
+	width: 100%;
+}
+.publist .tr.hidden {
+	display: none;
+}
+.publist .th.th_icon {
+	width: 36px;
+}
+.publist .th.th_info {
+	width: auto;
+}
+.publist .th.th_date_modified {
+	width: 10em;
+}
+
+
+.publist .th {
+	display: table-cell;
+	height: 20px;
+	background: url(http://docs.sdl.com/LiveContent/ui/css/../img/bg_resourcesTable.png) repeat;
+	text-align: left;
+    vertical-align: middle;
+}
+
+.publist .tr .td {
+	display: table-cell;
+	font: normal 11px Arial,sans-serif;
+	vertical-align: top;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+}
+
+.publist .td_icon {
+	display: table-cell;
+	font: normal 11px Arial,sans-serif;
+	vertical-align: top;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	width: 25px;
+	height: 45px;
+}
+
+.publist .td_info {
+	display: table-cell;
+	font: normal 12px Arial,sans-serif;
+	font-weight: bold;
+	vertical-align: top;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	padding-right: 10px;
+	width: auto;
+}
+
+.publist .td_date {
+	display: table-cell;
+	font: normal 11px Arial,sans-serif;
+	vertical-align: top;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	width: 10em;
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+	.td_date_wrap {
+		width: 8em !important;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+
+.publist select {
+	font-size: inherit;
+	color: inherit;
+}
+
+a.pub_title_link {
+	color: #262933;
+	text-decoration: none;
+}
+
+#showAllPubs, #showVisPubs { float: right; }
+
+.lc_widget_title  {
+	font-size: 15px;
+	#font-weight: bold;
+	text-shadow: 0px 1px 0px #FFFFFF;
+	color: #262933;
+}
+
+.lc_widget_title.lc_dropdown_root {
+	float: left;
+}
+
+.publistWidgetToolbar .lc_dropdown_menu {
+	margin-left: -22px;
+	margin-top: 15px;
+	font: normal 11px Arial,sans-serif;
+}
+
+.publistWidgetToolbar .ui-btn {
+	float:right;
+	margin: 10px;
+}
+
+.lc_publist_date_head, .lc_publist_date_content, .lc_publist_rev_head, .lc_publist_rev_content {
+	color: #828b99;
+}
+
+.lc_publist_meta_container {
+	font: normal 11px Arial,sans-serif;
+	color: black;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+.lc_publist_date_modified {
+	font: normal 11px Arial,sans-serif;
+	color: #000000;
+}
+.lc_publist_date_container, .lc_publist_rev_container, .lc_publist_lang_select {
+	display: inline;
+}
+
+.publist .tr.publist_row.normal .lc_publink_container {
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: auto;	
+	min-width: 100px;
+}
+
+.pub_status_icon {
+float: left;
+width: 10%;
+margin: 0 auto;
+}
+
+.pub_title_link {
+}
+
+/****************************************
+		34. Advanced Search Styles
+****************************************/
+.adv_search_interface {
+	padding:10px;
+}
+
+.adv_search_query_display {
+	color: gray;
+	padding-left:10px;
+}
+
+.adv_search_header {
+	padding-top:10px;
+	font-weight: bold;
+	padding-left:0px !important;
+} 
+
+.adv_search_interface table td {
+	padding-left:10px;
+}
+
+/****************************************
+		35. Search Result Styles
+****************************************/
+
+
+.search_result_page_header {
+	font-weight:bold;
+	float: left;
+}
+
+.search_results_page_stats {
+	float: left;
+}
+
+.search_result_header {
+	font-weight:normal;
+	color:blue;
+	text-decoration:underline;
+}
+.search_result_footer_head {
+	font-weight:bold;
+}
+.search_result_footer_content {
+	font-weight:normal;
+}
+
+.search_result_date {
+	margin-right: 1cm;
+}
+
+.search_result_header, .search_result_excerpt {
+	width: 100%;
+	margin-bottom: 5px;
+	display: block;
+}
+
+.search_result_highlight, .highlight {
+	font-weight:bold;
+    color:blue;
+}
+
+.highlight_focus {
+	border: 2pt solid blue;
+	background-color: yellow;
+}
+
+.search_result_before {
+	font-weight:normal;
+}
+
+.search_result_after {
+	font-weight:normal;
+}
+
+/* search paging styles to enable / disable buttons */
+#searchHitPaging {
+	display:none;
+	padding-top:3px;
+}
+
+#search_next_hit {
+	background-image: url(http://docs.sdl.com/LiveContent/ui/css/../img/triangle_right_dark.png);
+	background-position: center;
+	background-repeat: no-repeat;
+} 
+
+#search_prev_hit {
+	background-image: url(http://docs.sdl.com/LiveContent/ui/css/../img/triangle_left_dark.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#search_next_hit.ui-disabled {
+	background-image: url(http://docs.sdl.com/LiveContent/ui/css/../img/triangle_right.png);
+	background-position: center;
+	background-repeat: no-repeat;
+} 
+
+#search_prev_hit.ui-disabled {
+	background-image: url(http://docs.sdl.com/LiveContent/ui/css/../img/triangle_left.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+/****************************************
+		36. Styles for Special lc:namespace elements
+****************************************/
+.lc_failedref {
+	border:4pt solid #E42217;
+	background-color: #eeeeee;
+	padding:20px;
+	font-weight:bold;
+	margin:10px;
+}
+
+/****************************************
+		37. Basic Index Styles (basec on TOC styles)
+****************************************/
+
+/* top level index tree, a UL */
+.lc_index_tree {
+ 	list-style-type:none;
+ 	padding-left:0px;
+ 	margin-left:12px;
+ 	clear: left;
+ 	width: 90%\9; /* ie hackery */
+}
+
+/* index tree, lower level.  another UL */
+.lcitree {
+ 	list-style-type:none;
+ 	padding-left: 36px !important;
+	margin-left: 0px;
+	margin-top: 2px;
+}
+
+/* lc index term - contains a new term.  used by JavaScript to key links */
+.lcit_arrow {
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-bottom: 1px;
+	width: 7px;
+	height: 7px;
+	vertical-align: bottom;
+	text-align: left;
+	float: left;
+}
+
+.lcit {
+	margin-left: 13px;
+	margin-bottom: 3px;
+}
+
+.lcilt {
+	margin-left: 16px;
+}
+
+/* LI index term styling */
+li.lcit {
+	clear: left;
+}
+
+/* index term list, the UL that contains a list of links to topics */
+.lcil {
+	list-style: none;
+	margin-top:2px;
+}
+
+
+/****************************************
+		39. Increasing Courier font size for certain DITA elements:
+****************************************/
+
+.codeph, .codeblock, .filepath, .userinput, .msgph {
+/*	using font-size:11px; for all fonts now.  removed EMs
+	font-size: 1.2em; */
+}
+
+/* forcing all pre tags to wrap their text */
+pre {
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+/****************************************
+		40. embedding iframe into content pane
+****************************************/
+.lcContent_binary_iframe {
+	margin:0px;
+	border:0px;
+	padding:0px;
+}
+
+/* =============================================================
+ * 41. JQuery UI - Ribbon Widget 
+ * ============================================================= */ 
+.ribbon-header-logo {
+	float:right;
+	margin-right:20px;
+}
+
+.ui-ribbon-toggle {
+	height: 55px;
+	padding-top:35px;
+	padding-left:3px;
+	cursor:pointer;
+}
+
+.ui-ribbon-group {
+	height: 90px;
+	background-image: url(http://docs.sdl.com/LiveContent/ui/css/../img/ribbon_bg_extended.png);
+	clear:both;
+	font-size: 10px;
+}
+
+.ui-ribbon-group-subgroup {
+	height: 90px;
+	float:left;
+	background-image: url(http://docs.sdl.com/LiveContent/ui/css/../img/ribbon_bg_extended.png);
+}
+
+.ui-ribbon-group-subgroup-wrapper {
+	height:70px;
+}
+
+.ui-ribbon-group-separator {
+	background-image: url(http://docs.sdl.com/LiveContent/ui/css/../img/ribbon_separator_extended.png);
+	float:left;
+	width:3px;
+	height:90px;
+}
+
+.ui-ribbon-group-subgroup-object {
+	padding-top: 9px;
+	float:right;
+	cursor:pointer;
+	height:63px;
+	margin: 0 2px 0 2px;
+}
+
+.ui-ribbon-group-subgroup-button {
+	text-align: center;
+	padding:2px 8px 0px 8px;
+}
+
+.ui-ribbon-icon-active {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+	-moz-box-shadow: 1px 1px 1px #A1A1A1; /* Firefox/Mozilla */  
+	-webkit-box-shadow: 1px 1px 1px #A1A1A1; /*Safari/Chrome */  
+	box-shadow: 1px 1px 1px #A1A1A1; 
+    background: #c0c5ce; /* Old browsers */
+    background: -moz-linear-gradient(top, #c0c5ce 0%, #8c96ab 4%, #8a98b3 8%, #92a0ba 25%, #bfccde 83%, #c9d6e5 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c0c5ce), color-stop(4%,#8c96ab), color-stop(8%,#8a98b3), color-stop(25%,#92a0ba), color-stop(83%,#bfccde), color-stop(100%,#c9d6e5)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #c0c5ce 0%,#8c96ab 4%,#8a98b3 8%,#92a0ba 25%,#bfccde 83%,#c9d6e5 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #c0c5ce 0%,#8c96ab 4%,#8a98b3 8%,#92a0ba 25%,#bfccde 83%,#c9d6e5 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #c0c5ce 0%,#8c96ab 4%,#8a98b3 8%,#92a0ba 25%,#bfccde 83%,#c9d6e5 100%); /* IE10+ */
+    background: linear-gradient(top, #c0c5ce 0%,#8c96ab 4%,#8a98b3 8%,#92a0ba 25%,#bfccde 83%,#c9d6e5 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c0c5ce', endColorstr='#c9d6e5',GradientType=0 ); /* IE6-9 */
+}
+
+.ui-ribbon-icon-enabled {
+	display:none;
+}
+
+.ui-ribbon-group-label {
+	text-align:center;
+	clear:both;
+	font-size: 0.9em;
+	color:gray;
+}
+
+.ui-ribbon-group-subgroup-button span {
+	display:block;
+	width: 58px;
+}
+
+.ui-ribbon-harmless-wrapper {
+	float:left;
+}
+
+/* ************************************* 
+	vertical small lists 
+   ************************************* */
+.ui-ribbon-group-subgroup-vertical {
+	height:70px;
+	float:right;
+}
+
+.ui-ribbon-group-subgroup-vertical .ui-ribbon-group-subgroup-object {
+	height:auto;
+	clear:both;
+}
+
+.ui-ribbon-group-subgroup-vertical .ui-ribbon-group-subgroup-button span {
+	display:inline;
+	vertical-align: middle;
+	padding-right:5px;
+} 
+
+.ui-ribbon-group-subgroup-vertical .ui-ribbon-group-subgroup-button img {
+	vertical-align: middle;
+}
+
+/* ************************************* 
+	Ribbon specifics for vertical buttons 
+	from UX Spec for Commenting which 
+	is not yet consistent with Analytics
+   ************************************* */
+.ui-ribbon-group-subgroup-object-topic {
+	float:left;
+}
+
+.ui-ribbon-group-subgroup-object-topic span {
+	padding-left: 5px;
+}
+
+/* =============================================================
+ * 42. Xopus Edit Topic dialog
+ * ============================================================= */ 
+ 
+ #lcEditTopicHeader {
+    margin-top: 32px;
+    position: fixed;
+}
+ 
+.EditTopic .ui-dialog-titlebar,.TSAlert .ui-dialog-titlebar{
+	height: 15px;
+	background: #a0a0a0;
+	border: 1px solid #a0a0a0;
+}
+
+/* Edit Topic error messsages */
+.ui-edit-error {
+		background-image: url(http://docs.sdl.com/LiveContent/ui/css/../img/bg_statusBarInfo.png);
+        width:100%;
+        height:25px;
+        padding-top:5px;
+}
+
+.ui-edit-error img {
+	margin-right: 5px;
+	margin-left: 5px;
+	vertical-align: middle;
+}
+
+.ui-edit-error > span {
+	vertical-align: middle;
+}
+
+/* IE HACK because MS filter gradient does not honor the mouse click through */
+/* This is placed before the "ui-edit-shade" div to make sure no clicks get through */
+.ui-edit-shade-hack {
+	position:fixed;
+	background-color:black;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	z-index: 99998;
+	opacity:0.1;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=1);	
+}
+
+/* Overlay while waiting for editor to load */
+ .ui-edit-shade {
+	position:fixed;
+	height: 100%;
+	width:100%;
+	top:0;
+	left:0;
+	z-index: 99998;
+
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(255,255,255,0.85)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.85) 50%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.85) 50%,rgba(255,255,255,0) 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.85) 50%,rgba(255,255,255,0) 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.85) 50%,rgba(255,255,255,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', endColorstr='#ccffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+/* Align the text with the image */
+.ui-edit-waiting {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin: -50px 0px 0px -50px;
+	z-index: 99999;
+	text-align: justify;
+	width: 100px;
+}
+.ui-edit-waiting img {
+	display: block;
+	margin: 0 auto;
+}
+/* =============================================================
+ * 30. JQuery UI - Ribbon Widget Minimized
+ * ============================================================= */ 
+.ui-ribbon-group-minimized {
+	height: 32px;
+	background-image: url(http://docs.sdl.com/LiveContent/ui/css/../img/ribbon_bg_minimized.png);
+}
+
+.ui-ribbon-group-minimized .ui-ribbon-toggle {
+	height: 32px;
+	padding-top:8px;
+}
+
+.ui-ribbon-group-minimized .ui-ribbon-group-separator {
+	background-image: url(http://docs.sdl.com/LiveContent/ui/css/../img/ribbon_separator_minimized.png);
+	height:32px;
+}
+
+.ui-ribbon-group-minimized .ui-ribbon-group-subgroup {
+	height: 32px;
+	background-image: url(http://docs.sdl.com/LiveContent/ui/css/../img/ribbon_bg_minimized.png);
+}
+
+.ui-ribbon-group-minimized .ui-ribbon-group-subgroup-wrapper {
+	height:32px;
+	padding:0px 5px 0px 5px;
+}
+
+.ui-ribbon-group-minimized .ui-ribbon-group-subgroup-object {
+	padding-top: 5px;
+	height:23px;
+	margin-top: 1px;
+}
+
+.ui-ribbon-group-minimized .ui-ribbon-group-subgroup-button-label {
+	display:none;
+}
+
+.ui-ribbon-group-minimized  .ui-ribbon-group-subgroup-vertical .ui-ribbon-group-subgroup-button span {
+	display:none;
+} 
+
+.ui-ribbon-group-minimized  .ui-ribbon-group-subgroup-vertical .ui-ribbon-group-subgroup-object {
+	clear:none;
+}
+
+.ui-ribbon-group-minimized .ui-ribbon-group-label {
+	display:none;
+}
+
+/* =============================================================
+ * 43. Widgets on the Landing Page
+ * ============================================================= */ 
+
+.dashboardContentTable {
+	display:table;
+	width:100%;
+}
+
+/* Scrolling for iPad */
+#lcPublist, #lcPublist > div, #lcPublist .inner_toc_menu  {
+    height: inherit;
+}
+
+.dashboardContentTr {
+	display:table-row;
+}
+
+.centerWidgetWrap {
+	display: table-cell;
+	vertical-align:top;
+	min-width: 700px;
+	width: 100%;
+	padding: 20px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+	.centerWidgetWrap {
+    	min-width: 650px;
+	}
+}
+
+.sideWidgetWrap {
+	display:table-cell;
+	vertical-align:top;
+	min-width:220px;
+	padding:20px 30px;
+	min-height: 500px;
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+	.sideWidgetWrapRecentTopic {
+    	min-width: 150px;
+	}
+}
+
+.widgetContainer {
+	display: block;
+	width: 100%;
+}
+
+.sideWidgetContainer {
+	display: block;
+	margin:0 0 30px 0;
+	width: 270px;
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+	.sideWidgetContainer {
+    	width: 150px;
+	}
+}
+
+/* --Header row-- */
+
+.widgetHeader {
+	height: 47px;
+	line-height: 47px;
+	-moz-box-shadow: 0px 0px 3px #d1d1d1;
+}
+
+.widgetTitle {
+	font-family: Arial, sans-serif !important;
+	font-size: 15px;
+	#font-weight: bold;
+	vertical-align: middle;
+	text-align: left;
+	text-shadow: 0px 1px 0px #FFFFFF;
+	color: #262933;
+}
+
+/* --Body-- */
+
+.widgetBody {
+	background: #FFFFFF;
+	border-top:1px solid #D7DEEA;
+	border-bottom:1px solid #D7DEEA;
+	border-left:1px solid #D7DEEA;
+	border-right:1px solid #D7DEEA;
+	width:auto !important;
+}
+@media not screen and (max-device-width: 1024px) {
+	.widgetBody {
+		width:auto !important;
+	}
+}
+
+.widgetTable {
+	width: 100%;
+	background: #FFFFFF;
+	display: table;
+	#padding-bottom: 1px;
+}
+
+.displayTable {
+	display:table;
+}
+
+.displayNone {
+	display:none;
+}
+
+/* --Tabs-- */
+
+.widgetTabs {
+	width: 100%;
+	height: 18px;
+	border-width: 0 1px 0 0;
+	border-style: solid;
+	border-color: #D3DBE8;
+	font-size: 12px;
+	#font-weight: bold;
+	display: table-row;
+	text-transform: uppercase;
+}
+
+.widgetTab {
+	display:table-cell;
+	width:50%;
+	height: 47px;
+	text-align: center;
+	line-height: 47px;
+}
+
+.tabSelected {
+	background: #FFFFFF;
+	color: #000000;
+	border-width: 0;
+	width: 50%;
+	cursor: pointer;
+}
+
+.tabUnselectedViewsTab {
+	#background: url(http://docs.sdl.com/LiveContent/ui/css/../img/bg_widgetTab_unselected.png) repeat;
+	color: #000000;
+	background: #f8f8f8;
+	border-width: 0 0 1px 0;
+	width: 50%;
+	cursor: pointer;
+	border-bottom:1px solid #D7DEEA;
+	border-left:1px solid #D7DEEA;
+}
+
+.tabUnselectedEditsTab {
+	#background: url(http://docs.sdl.com/LiveContent/ui/css/../img/bg_widgetTab_unselected.png) repeat;
+	color: #000000;
+	background: #f8f8f8;
+	border-width: 0 0 1px 0;
+	width: 50%;
+	cursor: pointer;
+	border-bottom:1px solid #D7DEEA;
+	border-right:1px solid #D7DEEA;
+}
+
+.tabUnselected:hover {
+	color: #296ACC;
+}
+
+/* --Topics-- */
+
+.recenttopics-block {
+	min-height:249px;
+	width:270px;
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+	.recenttopics-block {
+    	min-width: 150px;
+		width:150px;
+	}
+}
+
+.widgetTopics, .widgetResources {
+	width: 100%;
+	display:table-row;
+	background-color: #FCFCFC;
+}
+
+.widgetTopic {
+	font-size: 12px;
+	color: #262933;
+	display: table-cell;
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	height: 40px;
+	border-bottom: 1px;
+	border-bottom: 1px solid #D7DEEA;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.widgetTopic:hover {
+	background-color: #E9F0FA;
+}
+.widgetTopic:active {
+	background-color: #BED2F0;
+}
+
+.widgetNoTopic {
+	font-size: 12px;
+	color:#959CA6;
+	display:table-cell;
+	height:216px;
+	vertical-align:middle;
+	text-align:center;
+}
+
+.widget_bullet {
+	margin-left: 5px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.widget_title_line {
+	display: inline;
+}
+
+.widgetTopic a {
+	color: #262933;
+	text-decoration: none;
+}
+
+/* --Comment Stream-- */
+
+.comments-block {
+	min-height:548px;
+	width: 270px;
+}
+
+.widgetComments, .widgetNoCommentsParent {
+	width: 100%;
+	font: normal 12px Arial, sans-serif !important;
+	display: table-row;
+}
+.widgetComments:nth-child(even)  div.widgetComment {
+  background-color: #FCFCFC;
+}
+.widgetComments:nth-child(even):hover  div.widgetComment:hover {
+  background-color: #E9F0FA;
+}
+.widgetComments:nth-child(even):active  div.widgetComment:active {
+  background-color: #BED2F0;
+}
+.widgetComments:hover {
+	background-color: #E9F0FA;
+	cursor: pointer;
+}
+.widgetComments:active {
+	background-color: #BED2F0;
+}
+.widgetComment {
+	display:table-cell;
+	padding: 10px;
+	border-bottom: 1px solid #D7DEEA !important;
+}
+.widgetCommentUserPhoto {
+float: left;
+height: 32px;
+width: 32px;
+	margin: 5px;
+/*background: url(http://docs.sdl.com/LiveContent/ui/css/../img/img_userPlaceholder20_normal.png) no-repeat top; */
+}
+
+.widgetComment a {
+	text-decoration: none;
+}
+.widgetCommentAuthorName {
+	margin: 5px 0px 0px 0px;
+	color:#5C636D;
+	font-size: 11px;
+	text-overflow: ellipsis;
+	overflow-x:hidden;
+	white-space: nowrap;
+	width: 206px;
+}
+.widgetCommentTopicName {
+	margin-bottom: 9px;
+	color:#296ACC;
+	font-size: 12px;
+	text-overflow: ellipsis;
+	overflow-x:hidden;
+	white-space: nowrap;
+	width:206px;
+}
+.widgetCommentTopicName a {
+	color:#296ACC;
+}
+.widgetCommentTopicText {
+	margin: 0px 0px 5px 5px;
+	text-overflow: ellipsis;
+	overflow-x:hidden;
+	width:243px;
+}
+
+.widgetCommentTopicName a:hover {
+	text-decoration: none;
+}
+
+.widgetCommentTopicText a {
+	color:#000000;
+}
+.widgetCommentTopicText a:hover {
+	text-decoration: none;
+}
+
+.widgetNoComments, .widgetNoResources {
+	font-size: 12px;
+	color:#959CA6;
+	display:table-cell;
+	height:500px;
+	vertical-align:middle;
+	text-align:center;
+}
+
+/* =============================================================
+ * 44. DITA over-ride styles
+ * ============================================================= */ 
+.ui-topic-title {
+	float:left;
+	font-size: 18px;
+	color: #262C39;	
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: break-word;
+	min-width: 0px;
+	padding-left:20px;
+	text-shadow: 0px 1px 0px #FFFFFF;
+}
+
+/* =============================================================
+ * 45. Content not found pages
+ * ============================================================= */ 
+.notfound_info {
+	margin:10px 0px 0px 40px;
+}
+</style>
+<style type="text/css" style="display:none">
+/* search paging styles to enable / disable buttons */
+
+#showAllPubs, #showVisPubs {
+    float: right;
+    padding-right: 50px;
+}
+
+
+/* rebuilding the publication list page to be multi-column */
+.pub_list_container {
+	display:table;
+	width:85%;
+	margin:auto;
+	position:static;
+}
+
+.pub_list_container div {
+	float: none !important;
+}
+
+.pubListRow {
+	display: table-row;
+}
+
+.pubListColumn {
+	display: table-cell;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 50%;
+}
+
+.pub_list_container h2 {
+	margin-top:20px;
+	font-size: 14px;
+}
+
+.pub_list_container a.pub_title_link {
+    text-decoration: underline;    
+}
+
+.pub_list_container a:visited.pub_title_link { 
+    color: #551A8B;
+}
+
+#lcPublist, #lcPublist > div, #lcPublist .inner_toc_menu {
+	height:auto;
+}
+
+.pubListSelect {
+
+}
+
+.pubListGroup{
+	display:none;
+}
+
+
+</style>
+</head><body class="login" onload="document.getElementById('username').focus()"><div id="login_background"><img file="login_overlay.png" src="SDL%20LiveContent%20Login_files/login_overlaybase-2014061155GMT.png" switchfile="" onclick="" class="login_overlay"></div><div id="login_content"><table class="login_content_table"><tbody><tr><td align="center" valign="middle"><div class="splash"><div class="login-title"><div lcuistring="welcome.salutation">Welcome to </div><img file="img_login_logo.png" src="SDL%20LiveContent%20Login_files/img_login_logobase-2014061155GMT.png" switchfile="" onclick=""></div><form onsubmit="javascript: return false; $loginButtonImage.click();"><div class="fields"><table><tbody><tr><td class="login_label"><span lcuistring="login.user">User Name</span>:
+		                                </td><td class="login_input"><input value="visitor" id="username" name="username" onkeydown="CVPortal.redirectEnter(event, 'CVPortal.components.lcCommon.login()');" type="text"></td></tr><tr><td class="login_label"><span lcuistring="login.password">Password</span>:
+		                            </td><td class="login_input"><input id="password" name="password" onkeydown="CVPortal.redirectEnter(event, 'CVPortal.components.lcCommon.login()');" type="password"></td></tr><tr><td class="login_label"><span lcuistring="lang.change">Select Language</span>: 
+		                            </td><td class="login_input"><select name="app.language" onchange="CVPortal.selectLanguage(event);"><option value="de" lcuistring="lang.de">German (de)</option><option value="en" selected="selected" lcuistring="lang.en">English (en)</option><option value="ja" lcuistring="lang.ja">Japanese (ja)</option></select></td></tr></tbody></table><div class="login_button xref"><img file="img_login_button_reach.png" src="SDL%20LiveContent%20Login_files/img_login_button_reachbase-2014061155GMT.png" switchfile="" onclick="CVPortal.components.lcCommon.login();"></div><input value="Submit" type="submit"><div id="loginStatus" class="login_status" style="display:none;"><img file="warning.png" src="SDL%20LiveContent%20Login_files/warningbase-2014061158GMT.png" switchfile="" onclick="">&nbsp;
+									<span>Status</span></div></div></form></div></td></tr></tbody></table></div><script type="text/javascript" language="javascript" src="SDL%20LiveContent%20Login_files/jquerybase-2014061158GMT.js"> 
+        </script><script type="text/javascript" language="javascript" src="SDL%20LiveContent%20Login_files/jquery.js"> 
+        </script><script type="text/javascript" language="javascript" src="SDL%20LiveContent%20Login_files/jquery_002.js"> 
+        </script><script type="text/javascript" language="javascript" src="SDL%20LiveContent%20Login_files/backbone.js"> 
+        </script><script type="text/javascript" language="javascript" src="SDL%20LiveContent%20Login_files/lcCorebase-2014061158GMT.js"> 
+        </script><script type="text/javascript" language="javascript" src="SDL%20LiveContent%20Login_files/lcModalbase-2014061158GMT.js"> 
+        </script><script type="text/javascript" language="javascript" src="SDL%20LiveContent%20Login_files/extensionsSDL-DOC-2014061145GMT.js"> 
+        </script><script type="text/javascript" language="javascript" src="SDL%20LiveContent%20Login_files/lcCommonbase-2014061158GMT.js"> 
+        </script><script type="text/javascript">
+$(function(){
+
+  $(window).bind( 'hashchange', function(e) {
+  		if(CVPortal.components.lcCommon) {
+  			CVPortal.components.lcCommon.historyChange(e);
+  		}
+  }); 
+});
+
+		
+	
+			window.LiveContentComponents = [
+				
+					{
+						"id": "lcCommon",
+						"props" : [
+								
+						],
+						"panels" : [
+								
+									{
+										"virtual" : "panel",
+										"target" : "contentPanel"
+									},
+									{
+										"virtual" : "tocPanel",
+										"target" : "tocPanel"
+									}
+						]
+					}
+			];
+		
+
+		
+			$(document).ready(function() {	
+				// =============================================
+				// init CV Portal:
+				// =============================================
+				window.CVPortal = new CV_Portal();
+				CVPortal.meta.loadMetaData();
+				CVPortal.loadResources("en");
+				CVPortal.panelFactory.loadPanels("base");
+				CVPortal.panelFactory.initResize();
+				CVPortal.loadComponents("simple");
+				$(window).trigger( 'hashchange' );
+			});
+		</script></body></html>
