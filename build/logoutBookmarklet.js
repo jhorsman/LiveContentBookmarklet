@@ -1,0 +1,1 @@
+javascript:(function(){window.location.href="http://docs.sdl.com/LiveContent/web/session.xql?action=logout&redirect=1";}());
