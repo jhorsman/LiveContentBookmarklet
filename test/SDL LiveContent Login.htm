@@ -3412,7 +3412,6 @@ width: 32px;
                                 <div lcuistring="welcome.salutation">Welcome to </div>
                                 <img file="img_login_logo.png" src="SDL%20LiveContent%20Login_files/img_login_logobase-2014061155GMT.png" switchfile="" onclick="">
                             </div>
-                            <form onsubmit="javascript: return false; $loginButtonImage.click();">
                                 <div class="fields">
                                     <table>
                                         <tbody>
@@ -3421,7 +3420,7 @@ width: 32px;
                                                     <span lcuistring="login.user">User Name</span>:
 		                                        </td>
                                                 <td class="login_input">
-                                                    <input value="visitor" id="username" name="username" onkeydown="CVPortal.redirectEnter(event, 'CVPortal.components.lcCommon.login()');" type="text">
+                                                    <input id="username" name="username" onkeydown="CVPortal.redirectEnter(event, 'CVPortal.components.lcCommon.login()');" type="text">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -3449,13 +3448,11 @@ width: 32px;
                                     <div class="login_button xref">
                                         <img file="img_login_button_reach.png" src="SDL%20LiveContent%20Login_files/img_login_button_reachbase-2014061155GMT.png" switchfile="" onclick="CVPortal.components.lcCommon.login();">
                                     </div>
-                                    <input value="Submit" type="submit">
                                     <div id="loginStatus" class="login_status" style="display:none;">
                                         <img file="warning.png" src="SDL%20LiveContent%20Login_files/warningbase-2014061158GMT.png" switchfile="" onclick="">&nbsp;
 									    <span>Status</span>
                                     </div>
                                 </div>
-                            </form>
                         </div>
                     </td>
                 </tr>
