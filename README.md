@@ -9,4 +9,4 @@ Click the bookmark to go to the LiveContent page, and click the bookmarklet agai
 * /source/liveContentLogout.js
 * /test                               an offline copy of LiveContent to test offline in the plane
 
-This bookmarklet is tested with http://sdllivecontent.sdl.com/ in Firefox 34.0
+This bookmarklet is tested with http://sdllivecontent.sdl.com/ in Firefox 34.0 and Chrome 39.
