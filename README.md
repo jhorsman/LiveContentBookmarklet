@@ -16,3 +16,5 @@ Project structure
 * /test                               an offline copy of LiveContent to test offline in the plane
 
 This bookmarklet is tested with http://sdllivecontent.sdl.com/ in Firefox 34.0 and Chrome 39.
+
+More info in [this post](http://sharedbyjan.blogspot.nl/2014/12/a-handy-documentation-bookmarklet.html).
